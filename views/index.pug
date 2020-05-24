@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  table
+    for lang in langs
+      td
+        a(href='/select/'+lang.id) #{lang.lang_code}
+
+  table
+    for book in books
+      tr
+        td= book.id
+        td= book.name
+        td= book.year
